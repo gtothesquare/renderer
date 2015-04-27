@@ -1,3 +1,19 @@
+*~
+.DS_Store
+.tmp/
+build/
+public/
+bower_components/
+.grunt/
+.sass-cache
+_UnitSpecRunner.html
+.project
+.settings/
+.log
+
 **/node_modules/**
 !node_modules/_
 .idea
+
+#bower components dir
+client/lib/

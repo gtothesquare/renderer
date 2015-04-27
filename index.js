@@ -1,4 +1,11 @@
-var app = require('_/app')(__dirname);
-console.log('listening port 3000');
+var cfg = require('_/config');
+var app = require('_/app');
 
-app.listen(3000);
+
+if (cfg.ipaddress) {
+  app.listen(cfg.port, cfg.ipaddress);
+} else {
+  app.listen(cfg.port);
+}
+
+console.log(cfg.greeting + ' at port ' + cfg.port);
